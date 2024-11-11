@@ -14,7 +14,7 @@
 
 
  .team-title{
-  padding-top: 8vh;
+  padding-top: 9vh;
   width: 100vw;
   height: 100vh;
   background-color: #000F16;
@@ -23,7 +23,7 @@
 }
 
 .team-title img{
-  height:88vh;
+  height:87vh;
   padding-left: 100vw;
   padding-right: 30vw;
 }
