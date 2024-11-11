@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Team.css";
+import ship from "../assets/ship.png"; // Update the path to your image
 import { useState } from "react";
 import FadeIn from "../components/FadeIn";
 import TeamCard from "../components/TeamCard";
 import FadeInContent from "../components/FadeInContent";
-import bg from "../assets/blue-bg.jpg";
+import bg from "../assets/Background.png";
 import PageTitle from "../components/PageTitle";
 import blueStone2 from "../assets/blue-bottle.webp";
 import PageLoader from "../components/PageLoader";
@@ -15,6 +16,45 @@ const Team = () => {
   const [team24, setTeam24] = useState([]);
   const [members, setMembers] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [scrolling, setScrolling] = useState(0); // Track scroll state to apply animation
+  const [transitioned, setTransitioned] = useState(false);
+
+  useEffect(() => {
+    if (!loading) {
+      const item = document.getElementById("team-title");
+
+      const handleScroll = (e) => {
+        e.preventDefault();
+
+        // Get the current position of the image in horizontal scroll (translateX)
+        const currentPosition = parseInt(
+          item.querySelector("img").style.transform.replace("translateX(", "").replace("px)", "")
+        );
+
+
+        if (e.deltaY > 0) {
+          if (currentPosition > -window.innerWidth/1.28) {
+            setScrolling((prev) => prev + 5);
+            if (scrolling+5 >= currentPosition/10) {
+              setTimeout(() => {
+                setTransitioned(true); // Set transitioned flag to true after 1 second
+              }, 1500);}
+          }
+          if (transitioned) {
+            window.scrollBy(0, 20);
+          }
+        } else {
+          window.scrollBy(0, -20);
+        }
+      };
+
+      item.addEventListener("wheel", handleScroll, { passive: false });
+
+      return () => {
+        item.removeEventListener("wheel", handleScroll);
+      };
+    }
+  }, [loading, scrolling, transitioned]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -45,7 +85,7 @@ const Team = () => {
         {"id": 10, "name": "Sushant Chivale", "vertical": 7, "image": "https://imgur.com/z0YkmAp.jpg", "github_link": "", "instagram_link": "https://instagram.com/sushant_chivale?igshid=OGQ5ZDc2ODk2ZA==", "facebook_link": "", "linkedin_link": "https://www.linkedin.com/in/sushant-chivale-ab6706234?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", "email": "", "phoneNo": "8888424929"},
       ] },
       { "id": 8, "name": "Marketing", "members":[
-        // No members data provided
+          // No members data provided
       ] },
       { "id": 9, "name": "Design and Creativity", "members": [
         {"id": 7, "name": "Shashwat Sharma", "vertical": 10, "image": "https://imgur.com/bIVx2mS.png", "github_link": "", "instagram_link": "https://www.instagram.com/sshashwat56/", "facebook_link": "", "linkedin_link": "http://www.linkedin.com/in/shashwat-sharma-2189b3223", "email": "sharma.133@iitj.ac.in", "phoneNo": "8052521146"},
@@ -100,13 +140,14 @@ const Team = () => {
       ) : (
         <FadeIn>
           <div className="team-main" style={{ backgroundImage: `url(${bg})` }}>
-            <div className="team-title">
-              <PageTitle
-                title="Organizing Team"
-                stone="Wisdom Elixir"
-                bgImg={blueStone2}
-                subheading="Meet the masterminds propelling our techno festival to new heights!"
-                color="14,53,177"
+            <div id="team-title" className="team-title">
+              <img
+                src="src/assets/ship.png"
+                style={{
+                  transform: `translateX(-${scrolling * 10}px)`, // Apply horizontal translation based on scroll state
+                  transition: "transform 0.9s ease-out", // Smooth transition for transform
+                }}
+                alt=""
               />
             </div>
             <div className="team-section">

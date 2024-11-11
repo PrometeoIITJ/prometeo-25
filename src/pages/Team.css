@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap");
 .team-main {
-  padding: 0 5vh 10vh;
+  padding: 0 0vh 10vh;
   margin: 0 auto;
   width: 100%;
   text-align: left;
@@ -11,15 +11,34 @@
   background-position: center;
   background-attachment: fixed;
 }
-/* .team-title{
-    text-align: left;
-    font-size: 1.2rem;
-    
-    font-weight: 700;
-    text-transform: uppercase;
-    font-family: 'Orbitron';
+
+
+ .team-title{
+  padding-top: 8vh;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000F16;
+  overflow-y: scroll;
+  
 }
-.team-title h1{
+
+.team-title img{
+  height:88vh;
+  padding-left: 100vw;
+  padding-right: 30vw;
+}
+/* #animated-ship {
+  position: fixed;
+  right: -100px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.5s ease-out;
+} */
+
+.ship-centered {
+  transform: translateX(-50vw) translateY(-50%);
+}
+/* .team-title h1{
     font-size: 3.75rem;
     color: #ED9340;
     font-family: 'Orbitron';
