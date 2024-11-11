@@ -142,12 +142,12 @@ const Team = () => {
           <div className="team-main" style={{ backgroundImage: `url(${bg})` }}>
             <div id="team-title" className="team-title">
               <img
-                src="src/assets/ship.png"
+                src={ship}
                 style={{
                   transform: `translateX(-${scrolling * 10}px)`, // Apply horizontal translation based on scroll state
                   transition: "transform 0.9s ease-out", // Smooth transition for transform
                 }}
-                alt=""
+                alt="ship"
               />
             </div>
             <div className="team-section">

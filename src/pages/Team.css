@@ -17,7 +17,7 @@
   padding-top: 9vh;
   width: 100vw;
   height: 100vh;
-  background-color: #000F16;
+  background-color: #000f16;
   overflow-y: scroll;
   
 }
@@ -27,17 +27,7 @@
   padding-left: 100vw;
   padding-right: 30vw;
 }
-/* #animated-ship {
-  position: fixed;
-  right: -100px;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: transform 0.5s ease-out;
-} */
 
-.ship-centered {
-  transform: translateX(-50vw) translateY(-50%);
-}
 /* .team-title h1{
     font-size: 3.75rem;
     color: #ED9340;
