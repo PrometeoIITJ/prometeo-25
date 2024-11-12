@@ -68,7 +68,7 @@ const Home = () => {
         <h1>Loading...</h1>
         </>
       ) : ( */}
-        <div>
+        <div className="home-page">
           <div className="home-body">
             <div ref={starsRef} className="stars">
               

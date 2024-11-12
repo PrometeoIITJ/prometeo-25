@@ -14,9 +14,20 @@
 
 :root {
   --back-image-url: url('./assets/coming-soon/bg-nostars.png');
-  --back-image-url-phone:url('./assets/coming-soon/bg-mobile-nostars.png')
+  --back-image-url-phone:url('./assets/coming-soon/bg-mobile-nostars.png');
+  --bg-image-url1: url('./assets/bg/1.webp');
+  --bg-image-url2: url('./assets/bg/2.webp');
+  --bg-image-url3: url('./assets/bg/3.webp');
+  --bg-image-url4: url('./assets/bg/4.webp');
+  --bg-image-url5: url('./assets/bg/5.webp');
+  --bg-image-url6: url('./assets/bg/6.webp');
+  --bg-image-url7: url('./assets/bg/7.webp');
+  --bg-image-url8: url('./assets/bg/8.webp');
 }
-
+.home-page{
+  background: var(--bg-image-url1) no-repeat center center fixed;
+    background-size: cover;
+}
 .home-body {
   position: absolute;
   left: 0;
@@ -34,35 +45,35 @@
 
 @keyframes backwardschange {
   0% {
-    background: url('./assets/bg/1.webp') no-repeat center center fixed;
+    background: var(--bg-image-url1) no-repeat center center fixed;
     background-size: cover;
   }
   15% {
-    background: url('./assets/bg/2.webp') no-repeat center center fixed;
+    background: var(--bg-image-url2) no-repeat center center fixed;
     background-size: cover;
   }
   30% {
-    background: url('./assets/bg/3.webp') no-repeat center center fixed;
+    background: var(--bg-image-url3) no-repeat center center fixed;
     background-size: cover;
   }
   45% {
-    background: url('./assets/bg/4.webp') no-repeat center center fixed;
+    background: var(--bg-image-url4) no-repeat center center fixed;
     background-size: cover;
   }
   60% {
-    background: url('./assets/bg/5.webp') no-repeat center center fixed;
+    background: var(--bg-image-url5) no-repeat center center fixed;
     background-size: cover;
   }
   75% {
-    background: url('./assets/bg/6.webp') no-repeat center center fixed;
+    background: var(--bg-image-url6) no-repeat center center fixed;
     background-size: cover;
   }
   90% {
-    background: url('./assets/bg/7.webp') no-repeat center center fixed;
+    background: var(--bg-image-url7) no-repeat center center fixed;
     background-size: cover;
   }
   100% {
-    background: url('./assets/bg/8.webp') no-repeat center center fixed;
+    background: var(--bg-image-url8) no-repeat center center fixed;
     background-size: cover;
   }
 }
