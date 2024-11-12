@@ -25,7 +25,7 @@
   --bg-image-url8: url('./assets/bg/8.webp');
 }
 body{
-  background: var(--bg-image-url1) no-repeat center center fixed;
+  /* background: var(--bg-image-url1) no-repeat center center fixed; */
     background-size: cover;
 }
 .home-body {
