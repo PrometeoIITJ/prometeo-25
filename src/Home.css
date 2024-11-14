@@ -455,12 +455,48 @@ body{
     padding: 0;
     box-sizing: border-box;
     width: 100vw;
-    height: 100vh;
-    background: var(--back-image-url-phone) no-repeat center center fixed;
+    height: 100svh;
+    /* background: var(--back-image-url-phone) no-repeat center center fixed; */
     background-size: cover;
     overflow: hidden;
     animation:none;
+  animation: 1.5s infinite alternate backwardschangeMobile;
 
+
+  }
+  @keyframes backwardschangeMobile {
+    0% {
+      background: url('./assets/mobile/1.webp') no-repeat center center fixed;
+      background-size: cover;
+    }
+    15% {
+      background: url('./assets/mobile/2.webp') no-repeat center center fixed;
+      background-size: cover;
+    }
+    30% {
+      background: url('./assets/mobile/3.webp') no-repeat center center fixed;
+      background-size: cover;
+    }
+    45% {
+      background: url('./assets/mobile/4.webp') no-repeat center center fixed;
+      background-size: cover;
+    }
+    60% {
+      background: url('./assets/mobile/5.webp') no-repeat center center fixed;
+      background-size: cover;
+    }
+    75% {
+      background: url('./assets/mobile/6.webp') no-repeat center center fixed;
+      background-size: cover;
+    }
+    90% {
+      background: url('./assets/mobile/7.webp') no-repeat center center fixed;
+      background-size: cover;
+    }
+    100% {
+      background: url('./assets/mobile/8.webp') no-repeat center center fixed;
+      background-size: cover;
+    }
   }
   
   .home-footer {
@@ -475,7 +511,7 @@ body{
     text-align: center;
     /* padding: 0px 18px 0px 0px !important; */
     margin: auto;
-    top:76%;
+    top:66%;
     z-index: 100;
   }
   .home-socialmedia {
@@ -499,7 +535,7 @@ body{
   display: flex;
   justify-content: start;
   flex-direction: row-reverse;
-  top:90.5%;
+  top:85.5%;
   bottom: 0px !important;
   width: 100%;
   font-size: 40px;

@@ -64,7 +64,7 @@ const Home = () => {
   useEffect(() => {
     const timer = setInterval(() => {
     setLoading(false)
-    }, 4000);
+    }, 0);
  
     return () => clearInterval(timer);
 
@@ -76,7 +76,12 @@ const Home = () => {
         <h1>Loading...</h1>
         </>
       ) : ( */}
-        <Loader style={loading ? {opacity:1}: {opacity:0}}/>
+        {/* <Loader /> */}
+        <div style={loading ? {opacity:1}: {opacity:0}} className="loader_page">
+          <div className="page-loader-main">
+
+          </div>
+        </div>
         <div style={loading ? {display:"none"}: {display:"block"}}>
           <div className="home-body">
             <div ref={starsRef} className="stars">
