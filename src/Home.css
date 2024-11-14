@@ -511,7 +511,7 @@ body{
     text-align: center;
     /* padding: 0px 18px 0px 0px !important; */
     margin: auto;
-    top:66%;
+    top:76%;
     z-index: 100;
   }
   .home-socialmedia {
@@ -535,7 +535,7 @@ body{
   display: flex;
   justify-content: start;
   flex-direction: row-reverse;
-  top:85.5%;
+  top:90.5%;
   bottom: 0px !important;
   width: 100%;
   font-size: 40px;
