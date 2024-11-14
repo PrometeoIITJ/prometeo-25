@@ -64,7 +64,7 @@ const Home = () => {
   useEffect(() => {
     const timer = setInterval(() => {
     setLoading(false)
-    }, 3000);
+    }, 4000);
  
     return () => clearInterval(timer);
 
