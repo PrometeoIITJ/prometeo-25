@@ -156,7 +156,7 @@ body{
 
 
 .home-title {
-  text-align: center; /* Center title text */
+  text-align: center; 
   width: 100%; 
   /* padding-left: 16%; */
 }
@@ -173,7 +173,7 @@ body{
 }
 
 .pre-register {
-  margin-top: 10px;
+  margin-top: 35px;
   width: 100%;
   z-index: 100;
   transition: transform 0.3s ease, scale 0.3s ease;
@@ -191,23 +191,30 @@ body{
   font-weight: 600;
   font-size: 1.7em; 
   line-height: 1.2; 
-  color: #000000;
-  /* text-decoration: underline;  */
   cursor: pointer;
   padding: 0;
   transition: color 0.3s ease; 
-  background-color: white;
   padding: 10px 20px;
   border-radius: 20px;
-  box-shadow: 2px 3px 5px black;
 }
 
 .pre-register span:hover {
   color: #BBBBBB; 
 }
 
+.register span{
+  color: #000000;
+  background-color: white;
+  box-shadow: 2px 3px 5px black;
 
-
+}
+.brochure span {
+  background-color: rgba(0, 0, 0, 0.19);
+  box-shadow: 2px 3px 5px black;
+}
+.brochure span a{
+  color: #ffffff;
+}
 .home-footer {
   width: 100%;
   position: absolute;
@@ -252,7 +259,7 @@ body{
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: var(--back-image-url) no-repeat center center;
+  /* background: var(--back-image-url) no-repeat center center; */
   background-size: cover;
   display: flex;
   align-items: center;
@@ -377,6 +384,8 @@ body{
 }
 
 
+
+
 @media screen and (max-width: 1280px) {
   .fogLeftContainer{
     top: 400px;
@@ -427,22 +436,11 @@ body{
     z-index: 100;
   }
   .pre-register span {
-    text-align: center;
-    font-family: 'Lemon-Milk', sans-serif;
-    font-style: normal;
-    font-weight: 600;
     font-size: 1.2em; 
     line-height: 1.2; 
-    color: #000000;
-    /* text-decoration: underline;  */
-    cursor: pointer;
-    padding: 0;
-    transition: color 0.3s ease; 
-    background-color: white;
     padding: 5px 15px;
-    border-radius: 20px;
-    box-shadow: 2px 3px 5px black;
   }
+  
 }
 
 @media screen and (max-width: 480px) {
@@ -471,38 +469,40 @@ body{
     bottom: 0px !important;
     height: 7vh !important;
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
+    flex-direction:row-reverse;
+    /* justify-content: center; */
     align-items: center;
     text-align: center;
-    padding: 0px 18px 0px 0px !important;
+    /* padding: 0px 18px 0px 0px !important; */
     margin: auto;
-    top:80%;
+    top:76%;
     z-index: 100;
   }
+  .home-socialmedia {
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+  }
+  .pre-register {
+    margin-top: 15px;
+  }
   .pre-register span {
-    text-align: center;
-    font-family: 'Lemon-Milk', sans-serif;
-    font-style: normal;
     font-weight: 600;
     font-size: 0.8em; 
     line-height: 1.2; 
-    color: #000000;
-    /* text-decoration: underline;  */
-    cursor: pointer;
-    padding: 0;
-    transition: color 0.3s ease; 
-    background-color: white;
     padding: 5px 10px;
-    border-radius: 20px;
-    box-shadow: 2px 3px 5px black;
   }
   .home-music{
   position: relative;
+  display: flex;
+  justify-content: start;
   flex-direction: row-reverse;
-  top:6%;
+  top:90.5%;
+  bottom: 0px !important;
   width: 100%;
-  font-size: 30px;
+  font-size: 40px;
   }
   
   .fogLeftContainer{
@@ -516,11 +516,30 @@ body{
     height: auto; 
     width: 60px;
   }
+  .logo {
+    box-sizing: border-box;
+    display: flex;
+    width: auto; 
+    margin: 0rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    justify-content: center;
+    height: auto !important; /* Reset height */
+    padding: 0 !important;
+    z-index: 10;
+  }
   .home-title h1{
     color: white;
     font-weight: 900;
     font-size: 40px;
   }
+  .home-title {
+    margin-top: 40px;
+  }
+  /* .modal-back {
+    background: var(--back-image-url) no-repeat center center;
+  } */
   
 }
 

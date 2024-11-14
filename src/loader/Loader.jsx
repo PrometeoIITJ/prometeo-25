@@ -3,12 +3,12 @@ import Stars from "./Stars";
 
 const Loader = () => {
   return (
-    <>
+    <div className="loader_page">
       <div
         style={{ display: "flex", margin: "auto", justifyContent: "center" }}
         className="page-loader-main"
       >
-        <Stars number={2000} />
+        {/* <Stars number={2000} /> */}
         <div className="hexagon" aria-label="Animated hexagonal ripples">
           <div className="hexagon__group">
             <div className="hexagon__sector"></div>
@@ -60,7 +60,7 @@ const Loader = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

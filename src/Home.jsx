@@ -63,10 +63,11 @@ const Home = () => {
   // }, []);
   useEffect(() => {
     const timer = setInterval(() => {
-      setLoading(false)
+    setLoading(false)
     }, 3000);
-
+ 
     return () => clearInterval(timer);
+
   }, []);
   return (
     <>
@@ -75,9 +76,7 @@ const Home = () => {
         <h1>Loading...</h1>
         </>
       ) : ( */}
-      <div style={loading ? {opacity:1}: {opacity:0}}>
-        <Loader/>
-      </div>
+        <Loader style={loading ? {opacity:1}: {opacity:0}}/>
         <div style={loading ? {display:"none"}: {display:"block"}}>
           <div className="home-body">
             <div ref={starsRef} className="stars">
@@ -91,9 +90,13 @@ const Home = () => {
               <div className="home-title">
                 <h1>COMING SOON</h1>
               </div>
-              <div className="pre-register">
+              <div className="pre-register register">
                 <span onClick={handlePreRegisterClick}>PRE-REGISTER NOW</span>
               </div>
+              <div className="pre-register brochure">
+                <span><a href="https://drive.google.com/file/d/1r9mu9t_DfMARXxZ8qPl1LWiPNtSbEVCQ/view" target="_blank" rel="noopener noreferrer">DOWNLOAD BROCHURE</a></span>
+              </div>
+              
               
               <div className="fogLeftContainer">
                 <FogLeft/>
