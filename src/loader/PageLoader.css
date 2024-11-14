@@ -5,7 +5,7 @@
 }
 
 .page-loader-main {
-    background-image: url('../assets/bg/1.webp');
+    background: url('../assets/bg/1.webp') no-repeat center center fixed;
     height: 100svh;
     width: 100%;
     background-repeat: no-repeat;
