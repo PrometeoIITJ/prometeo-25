@@ -1,15 +1,27 @@
 .loader_page{
   width: 100vw;
+  margin-top: 2px;
 
 }
 
 .page-loader-main {
-    background-image: url('../assets/loader.jpeg');
-    height: 100vh;
+    background-image: url('../assets/bg/1.webp');
+    height: 100svh;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
+    position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+    /* display: flex; */
+  }
+
+  @media screen and (max-width: 480px) {
+    .page-loader-main {
+      background-image: url('../assets/coming-soon/bg-mobile-nostars.png');
+    }
   }
   
   .hexagon {
