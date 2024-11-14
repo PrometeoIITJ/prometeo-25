@@ -14,9 +14,20 @@
 
 :root {
   --back-image-url: url('./assets/coming-soon/bg-nostars.png');
-  --back-image-url-phone:url('./assets/coming-soon/bg-mobile-nostars.png')
+  --back-image-url-phone:url('./assets/coming-soon/bg-mobile-nostars.png');
+  --bg-image-url1: url('./assets/bg/1.webp');
+  --bg-image-url2: url('./assets/bg/2.webp');
+  --bg-image-url3: url('./assets/bg/3.webp');
+  --bg-image-url4: url('./assets/bg/4.webp');
+  --bg-image-url5: url('./assets/bg/5.webp');
+  --bg-image-url6: url('./assets/bg/6.webp');
+  --bg-image-url7: url('./assets/bg/7.webp');
+  --bg-image-url8: url('./assets/bg/8.webp');
 }
-
+body{
+  /* background: var(--bg-image-url1) no-repeat center center fixed; */
+    background-size: cover;
+}
 .home-body {
   position: absolute;
   left: 0;
@@ -34,35 +45,35 @@
 
 @keyframes backwardschange {
   0% {
-    background: url('./assets/bg/1.webp') no-repeat center center fixed;
+    background: var(--bg-image-url1) no-repeat center center fixed;
     background-size: cover;
   }
   15% {
-    background: url('./assets/bg/2.webp') no-repeat center center fixed;
+    background: var(--bg-image-url2) no-repeat center center fixed;
     background-size: cover;
   }
   30% {
-    background: url('./assets/bg/3.webp') no-repeat center center fixed;
+    background: var(--bg-image-url3) no-repeat center center fixed;
     background-size: cover;
   }
   45% {
-    background: url('./assets/bg/4.webp') no-repeat center center fixed;
+    background: var(--bg-image-url4) no-repeat center center fixed;
     background-size: cover;
   }
   60% {
-    background: url('./assets/bg/5.webp') no-repeat center center fixed;
+    background: var(--bg-image-url5) no-repeat center center fixed;
     background-size: cover;
   }
   75% {
-    background: url('./assets/bg/6.webp') no-repeat center center fixed;
+    background: var(--bg-image-url6) no-repeat center center fixed;
     background-size: cover;
   }
   90% {
-    background: url('./assets/bg/7.webp') no-repeat center center fixed;
+    background: var(--bg-image-url7) no-repeat center center fixed;
     background-size: cover;
   }
   100% {
-    background: url('./assets/bg/8.webp') no-repeat center center fixed;
+    background: var(--bg-image-url8) no-repeat center center fixed;
     background-size: cover;
   }
 }
@@ -145,7 +156,7 @@
 
 
 .home-title {
-  text-align: center; /* Center title text */
+  text-align: center; 
   width: 100%; 
   /* padding-left: 16%; */
 }
@@ -162,7 +173,7 @@
 }
 
 .pre-register {
-  margin-top: 10px;
+  margin-top: 35px;
   width: 100%;
   z-index: 100;
   transition: transform 0.3s ease, scale 0.3s ease;
@@ -180,23 +191,30 @@
   font-weight: 600;
   font-size: 1.7em; 
   line-height: 1.2; 
-  color: #000000;
-  /* text-decoration: underline;  */
   cursor: pointer;
   padding: 0;
   transition: color 0.3s ease; 
-  background-color: white;
   padding: 10px 20px;
   border-radius: 20px;
-  box-shadow: 2px 3px 5px black;
 }
 
 .pre-register span:hover {
   color: #BBBBBB; 
 }
 
+.register span{
+  color: #000000;
+  background-color: white;
+  box-shadow: 2px 3px 5px black;
 
-
+}
+.brochure span {
+  background-color: rgba(0, 0, 0, 0.19);
+  box-shadow: 2px 3px 5px black;
+}
+.brochure span a{
+  color: #ffffff;
+}
 .home-footer {
   width: 100%;
   position: absolute;
@@ -241,7 +259,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: var(--back-image-url) no-repeat center center;
+  /* background: var(--back-image-url) no-repeat center center; */
   background-size: cover;
   display: flex;
   align-items: center;
@@ -366,6 +384,8 @@
 }
 
 
+
+
 @media screen and (max-width: 1280px) {
   .fogLeftContainer{
     top: 400px;
@@ -416,22 +436,11 @@
     z-index: 100;
   }
   .pre-register span {
-    text-align: center;
-    font-family: 'Lemon-Milk', sans-serif;
-    font-style: normal;
-    font-weight: 600;
     font-size: 1.2em; 
     line-height: 1.2; 
-    color: #000000;
-    /* text-decoration: underline;  */
-    cursor: pointer;
-    padding: 0;
-    transition: color 0.3s ease; 
-    background-color: white;
     padding: 5px 15px;
-    border-radius: 20px;
-    box-shadow: 2px 3px 5px black;
   }
+  
 }
 
 @media screen and (max-width: 480px) {
@@ -460,38 +469,40 @@
     bottom: 0px !important;
     height: 7vh !important;
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
+    flex-direction:row-reverse;
+    /* justify-content: center; */
     align-items: center;
     text-align: center;
-    padding: 0px 18px 0px 0px !important;
+    /* padding: 0px 18px 0px 0px !important; */
     margin: auto;
-    top:80%;
+    top:76%;
     z-index: 100;
   }
+  .home-socialmedia {
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+  }
+  .pre-register {
+    margin-top: 15px;
+  }
   .pre-register span {
-    text-align: center;
-    font-family: 'Lemon-Milk', sans-serif;
-    font-style: normal;
     font-weight: 600;
     font-size: 0.8em; 
     line-height: 1.2; 
-    color: #000000;
-    /* text-decoration: underline;  */
-    cursor: pointer;
-    padding: 0;
-    transition: color 0.3s ease; 
-    background-color: white;
     padding: 5px 10px;
-    border-radius: 20px;
-    box-shadow: 2px 3px 5px black;
   }
   .home-music{
   position: relative;
+  display: flex;
+  justify-content: start;
   flex-direction: row-reverse;
-  top:6%;
+  top:90.5%;
+  bottom: 0px !important;
   width: 100%;
-  font-size: 30px;
+  font-size: 40px;
   }
   
   .fogLeftContainer{
@@ -505,11 +516,30 @@
     height: auto; 
     width: 60px;
   }
+  .logo {
+    box-sizing: border-box;
+    display: flex;
+    width: auto; 
+    margin: 0rem;
+    margin-top: 1.2rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    justify-content: center;
+    height: auto !important; /* Reset height */
+    padding: 0 !important;
+    z-index: 10;
+  }
   .home-title h1{
     color: white;
     font-weight: 900;
     font-size: 40px;
   }
+  .home-title {
+    margin-top: 40px;
+  }
+  /* .modal-back {
+    background: var(--back-image-url) no-repeat center center;
+  } */
   
 }
 

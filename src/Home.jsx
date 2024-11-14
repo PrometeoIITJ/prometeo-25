@@ -12,7 +12,8 @@ import BGmusic from "./assets/coming-soon/bg-music.mp3";
 import { HiMiniSpeakerWave, HiMiniSpeakerXMark } from "react-icons/hi2";
 import { Link } from "react-router-dom";
 // import { gsap, Power2 } from 'gsap';
-
+import img1 from './assets/bg/1.webp'
+import Loader from "./loader/Loader.jsx";
 const Home = () => {
   const [loading, setLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false); // State for modal
@@ -60,7 +61,14 @@ const Home = () => {
   //     .then(() => setLoading(false))
   //     .catch((err) => console.log("Failed to load images", err));
   // }, []);
+  useEffect(() => {
+    const timer = setInterval(() => {
+    setLoading(false)
+    }, 3000);
+ 
+    return () => clearInterval(timer);
 
+  }, []);
   return (
     <>
       {/* {loading ? (
@@ -68,7 +76,8 @@ const Home = () => {
         <h1>Loading...</h1>
         </>
       ) : ( */}
-        <div>
+        <Loader style={loading ? {opacity:1}: {opacity:0}}/>
+        <div style={loading ? {display:"none"}: {display:"block"}}>
           <div className="home-body">
             <div ref={starsRef} className="stars">
               
@@ -81,9 +90,13 @@ const Home = () => {
               <div className="home-title">
                 <h1>COMING SOON</h1>
               </div>
-              <div className="pre-register">
+              <div className="pre-register register">
                 <span onClick={handlePreRegisterClick}>PRE-REGISTER NOW</span>
               </div>
+              <div className="pre-register brochure">
+                <span><a href="https://drive.google.com/file/d/1r9mu9t_DfMARXxZ8qPl1LWiPNtSbEVCQ/view" target="_blank" rel="noopener noreferrer">DOWNLOAD BROCHURE</a></span>
+              </div>
+              
               
               <div className="fogLeftContainer">
                 <FogLeft/>
@@ -166,7 +179,7 @@ const Home = () => {
           
           <Modal isModalOpen={isModalOpen} closeModal={closeModal} />
         </div>
-      {/* )} */}
+      {/*  )} */}
     </>
   );
 };
