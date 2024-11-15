@@ -151,7 +151,7 @@ body{
 .logo img {
   /* max-width: 40%; */
   height: auto; 
-  width: 200px;
+  width: 250px;
 }
 
 
@@ -555,7 +555,7 @@ body{
   }
   .logo img {
     height: auto; 
-    width: 150px;
+    width: 220px;
     margin: auto;
   }
   .logo {
