@@ -1,5 +1,4 @@
 import "./PageLoader.css";
-import Stars from "./Stars";
 
 const Loader = () => {
   return (
@@ -9,7 +8,7 @@ const Loader = () => {
         className="page-loader-main"
       >
         {/* <Stars number={2000} /> */}
-        <div className="hexagon" aria-label="Animated hexagonal ripples">
+        <div id="loader" className="hexagon" aria-label="Animated hexagonal ripples">
           <div className="hexagon__group">
             <div className="hexagon__sector"></div>
             <div className="hexagon__sector"></div>

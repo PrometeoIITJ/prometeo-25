@@ -1,18 +1,15 @@
 import Stars from "./components/stars.jsx";
 import React, { useEffect, useRef, useState } from "react";
 import Modal from "./components/modal.jsx";
-import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram, FaLinkedinIn, FaDownload } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import "./Home.css";
-import logo from "./assets/coming-soon/logo.gif";
-import title from "./assets/coming-soon/main_heading.webp";
+import logo from "./assets/coming-soon/Frame_10.svg";
 import FogLeft from "./components/fogLeft.jsx";
 import FogRight from "./components/fogRight.jsx";
 import BGmusic from "./assets/coming-soon/bg-music.mp3";
 import { HiMiniSpeakerWave, HiMiniSpeakerXMark } from "react-icons/hi2";
 import { Link } from "react-router-dom";
-// import { gsap, Power2 } from 'gsap';
-import img1 from './assets/bg/1.webp'
 import Loader from "./loader/Loader.jsx";
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -20,10 +17,6 @@ const Home = () => {
   const [music, setMusic] = useState(false);
   const audioRef = useRef();
   const starsRef = useRef(null); // Ref to store the stars container
-  // const fogRef = useRef([]);
-  // const fogMidRef = useRef(null);
-  // const fogBottomRef = useRef(null);
-  // const fogTopRef = useRef(null);
   const handlePreRegisterClick = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
@@ -64,6 +57,7 @@ const Home = () => {
   useEffect(() => {
     const timer = setInterval(() => {
     setLoading(false)
+    document.getElementById("loader").style.opacity= 0
     }, 1000);
  
     return () => clearInterval(timer);
@@ -91,11 +85,13 @@ const Home = () => {
               <div className="home-title">
                 <h1>COMING SOON</h1>
               </div>
+              <div className="details">
               <div className="pre-register register">
                 <span onClick={handlePreRegisterClick}>PRE-REGISTER NOW</span>
               </div>
               <div className="pre-register brochure">
-                <span><a href="https://drive.google.com/file/d/1r9mu9t_DfMARXxZ8qPl1LWiPNtSbEVCQ/view" target="_blank" rel="noopener noreferrer">DOWNLOAD BROCHURE</a></span>
+                <span><a href="https://drive.google.com/file/d/1r9mu9t_DfMARXxZ8qPl1LWiPNtSbEVCQ/view" target="_blank" rel="noopener noreferrer"><FaDownload/> BROCHURE </a></span>
+              </div>
               </div>
               
               

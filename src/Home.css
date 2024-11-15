@@ -151,7 +151,7 @@ body{
 .logo img {
   /* max-width: 40%; */
   height: auto; 
-  width: 100px;
+  width: 250px;
 }
 
 
@@ -171,10 +171,15 @@ body{
   font-size: 180px;
   margin-bottom: 30px;
 }
+.details{
+  display: flex;
+  width: 100vw;
+  margin: auto;
+  justify-content: center;
+}
 
 .pre-register {
-  margin-top: 35px;
-  width: 100%;
+  padding-right: 15px;
   z-index: 100;
   transition: transform 0.3s ease, scale 0.3s ease;
 }
@@ -550,7 +555,8 @@ body{
   }
   .logo img {
     height: auto; 
-    width: 60px;
+    width: 220px;
+    margin: auto;
   }
   .logo {
     box-sizing: border-box;
@@ -576,6 +582,9 @@ body{
   /* .modal-back {
     background: var(--back-image-url) no-repeat center center;
   } */
+  .details{
+    flex-direction:column;
+  }
   
 }
 

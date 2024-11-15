@@ -1,7 +1,7 @@
 .loader_page{
   width: 100vw;
   margin-top: 2px;
-
+  opacity: 1;
 }
 
 .page-loader-main {
@@ -20,7 +20,8 @@
 
   @media screen and (max-width: 480px) {
     .page-loader-main {
-      background-image: url('../assets/coming-soon/bg-mobile-nostars.png');
+      background: url('../assets/mobile/1.webp') no-repeat center center fixed;
+      background-size: cover;
     }
   }
   
