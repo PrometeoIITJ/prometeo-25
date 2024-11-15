@@ -20,7 +20,7 @@
 
   @media screen and (max-width: 480px) {
     .page-loader-main {
-      background-image: url('../assets/coming-soon/bg-mobile-nostars.png');
+      background: url('../assets/coming-soon/bg-mobile-nostars.png') no-repeat center center fixed;
     }
   }
   
