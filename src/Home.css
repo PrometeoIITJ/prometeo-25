@@ -531,14 +531,14 @@ body{
     padding: 5px 10px;
   }
   .home-music{
-  position: relative;
   display: flex;
   justify-content: start;
   flex-direction: row-reverse;
   top:90.5%;
   bottom: 0px !important;
-  width: 100%;
+  width: 50%;
   font-size: 40px;
+  position: fixed;
   }
   
   .fogLeftContainer{
