@@ -1,9 +1,8 @@
 import "./PageLoader.css";
-import Stars from "./Stars";
 
 const Loader = () => {
   return (
-    <div className="loader_page">
+    <div id="loader" className="loader_page">
       <div
         style={{ display: "flex", margin: "auto", justifyContent: "center" }}
         className="page-loader-main"
