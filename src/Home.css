@@ -169,8 +169,14 @@ body{
   color: white;
   font-weight: 900;
   font-size: 180px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
+.home-title h2{
+  font-family: 'Lemon-Milk-Bold';
+  color: white;
+   margin-bottom: 30px;
+}
+
 .details{
   display: flex;
   width: 100vw;

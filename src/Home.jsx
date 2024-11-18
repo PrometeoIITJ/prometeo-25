@@ -84,6 +84,7 @@ const Home = () => {
               </div>
               <div className="home-title">
                 <h1>COMING SOON</h1>
+                <h2>17-19 Jan 2025</h2>
               </div>
               <div className="details">
               <div className="pre-register register">
