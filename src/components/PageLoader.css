@@ -1,9 +1,10 @@
 .page-loader-main {
   background-image: url(../assets/loader/Loader.webp);
   background-repeat: no-repeat;
+  box-sizing: border-box;
   background-size: cover;
   height: 100vh;
-  width: 100vw;
+  width: 99vw;
 }
 .hexagon {
   color: #dfbb55;

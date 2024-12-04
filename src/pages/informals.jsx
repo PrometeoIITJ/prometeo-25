@@ -8,7 +8,7 @@ import PageTitle from "../components/PageTitle";
 import PageLoader from "../components/PageLoader";
 import Go2Top from "../components/Go2Top";
 import redStone from "../assets/blue_elixir.png";
-import bg from "../assets/dashboard/dashboard_bg.png";
+import bg from "../assets/dashboard/dashboard_bg.jpg";
 import "./informals.css";
 import PreEvents from "./PreEvents";
 

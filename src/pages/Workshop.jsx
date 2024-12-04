@@ -8,9 +8,11 @@ import PageTitle from "../components/PageTitle";
 import PageLoader from "../components/PageLoader";
 import Go2Top from "../components/Go2Top";
 import redStone from "../assets/blue_elixir.png";
-import bg from "../assets/dashboard/dashboard_bg.png";
+import bg from "../assets/dashboard/dashboard_bg.jpg";
+import textBg from "../assets/dashboard/textbg.jpg";
 import "./Workshop.css";
 import PreEvents from "./PreEvents";
+import eventsDataTemp from "./Events24";
 
 const Workshop = () => {
 const [category, setCategory] = useState("All");
@@ -50,6 +52,7 @@ const [category, setCategory] = useState("All");
     window.scrollTo(0, 0);
     const navBarEle = document.getElementById("navbar");
     navBarEle.style.opacity = 1;
+    setEventsData(eventsDataTemp)
   }, []);
 
   // useEffect(() => {
@@ -85,54 +88,14 @@ const [category, setCategory] = useState("All");
           >
             <FadeInContent>
               <div className="eventspage-events">
-                <div className="events-heading">
-                  <PageTitle
-                    title="Workshop"
-                    stone="Vitality Elixir"
-                    bgImg={redStone}
-                    // subheading="RELIVE THE MOMENTS THAT DEFINED INNOVATION, THE PIONEERING EVENTS OF PROMETEO'23!"
-                    color="200,88,157"
-                  />
+                <div className="events-heading " style={{ backgroundImage: `url(${textBg})` }}>
+                 workshops
                 </div>
-                {/* <div className="filter" id="filter___id">
-                  <button
-                    className={`filter___button`}
-                    onClick={(e) => {
-                      setCategory("Entrepreneurial");
-                      element.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start",
-                      });
-                      handleEventTab(2);
-                    }}
-                  >
-                    <img
-                      className=""
-                      src={entrepreneurial_events}
-                      alt="cloud"
-                    />
-                  </button>
-                  <button
-                    className={`filter___button`}
-                    onClick={(e) => {
-                      setCategory("All");
-                      element.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start",
-                      });
-                      handleEventTab(3);
-                    }}
-                  >
-                    <img className="" src={all_events} alt="cloud" />
-                  </button>
-                </div> */}
                 <div className="pre-events workshops-content-main" id="EventList">
                   <PreEvents
                     category={category}
                     workshop={true}
-                    // data={eventsData.filter((e) => {
-                    //   return e.type !== "talk";
-                    // })}
+                    data={eventsData}
                   />
                 </div>
               </div>

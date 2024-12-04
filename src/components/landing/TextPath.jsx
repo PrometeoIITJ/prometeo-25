@@ -1,18 +1,19 @@
 import { Text } from "@react-three/drei";
 //import { fadeOnBeforeCompileFlat } from "../utils/fadeMaterial";
 
-export const TextPath = ({ title, subtitle, ...props }) => {
+export const TextPath = ({ title, subtitle, opacity, ...props }) => {
   return (
     <group {...props}>
       {!!title && (
         <Text
-          color="white"
+          color="none"
           anchorX={"left"}
           anchorY="bottom"
           fontSize={0.52}
           maxWidth={2.5}
           lineHeight={1}
           font={"./fonts/DMSerifDisplay-Regular.ttf"}
+          fillOpacity={opacity}
         >
           {title}
           {/* <meshStandardMaterial
@@ -29,6 +30,7 @@ export const TextPath = ({ title, subtitle, ...props }) => {
         fontSize={0.2}
         maxWidth={2.5}
         font={"./fonts/Inter-Regular.ttf"}
+        fillOpacity={opacity}
       >
         {subtitle}
         {/* <meshStandardMaterial

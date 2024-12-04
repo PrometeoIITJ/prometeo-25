@@ -1,72 +1,34 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Gemunu+Libre:wght@200..800&display=swap');
 .event-card {
-  width:  20.545rem;
-height:40.8125rem;
-gap: 20px;
-opacity: 0px;
+  width: 19.518rem;
+  height: 45.68rem;
+  gap: 20px;
+  opacity: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* background: rgba(0, 0, 0, 0.7); */
   transition: all 2s ease;
-  
 }
-
-/* .workshop{
-  min-height: 45em;
-} */
-
-
 .member-img {
   width: 100%;
-  width: 279.5px;
-  height: 327.55px;
-  top: 32.34px;
+  width: 17.46rem; /* 279.5px / 16 */
+  height: 20.47rem; /* 327.55px / 16 */
+  top: 2.02rem;
 }
 .member-img img{
-  width: 279.5px;
-height: 327.55px;
-top: 32.34px;
-left: 26.72px;
-gap: 0px;
-opacity: 0px;
+  width: 17.46rem; /* 279.5px / 16 */
+  height: 20.47rem; /* 327.55px / 16 */
+  top: 2.02rem; /* 32.34px / 16 */
+  left: 1.67rem;
+  gap: 0px;
+  opacity: 0px;
 
   position: absolute;
-    transform-origin: center; 
-    transition: filter 0.3s ease; 
-    /* border-style: solid;
-    border-width: 5px;
-    border-color:transparent ;
-    overflow: hidden; */
-    overflow: hidden;
-    clip-path: polygon(18% 0, 100% 0, 100% 99%, 0 99%, 0 16%);
-}
-
-.member-img {
-  width: 100%;
-  width: 279.5px;
-  height: 327.55px;
-  top: 32.34px;
-}
-.member-img img{
-  width: 279.5px;
-height: 327.55px;
-top: 32.34px;
-left: 26.72px;
-gap: 0px;
-opacity: 0px;
-
-  position: absolute;
-    transform-origin: center; 
-    transition: filter 0.3s ease; 
-    /* border-style: solid;
-    border-width: 5px;
-    border-color:transparent ;
-    overflow: hidden; */
-    overflow: hidden;
-    clip-path: polygon(18% 0, 100% 0, 100% 99%, 0 99%, 0 16%);
+  transform-origin: center; 
+  transition: filter 0.3s ease; 
+  overflow: hidden;
+  clip-path: polygon(18% 0, 100% 0, 100% 99%, 0 99%, 0 16%);
 }
 
 .background-overlay {
@@ -80,10 +42,9 @@ opacity: 0px;
   pointer-events: none; 
   overflow: hidden;
 }
-
-.membre{
-  width: 328.72px;                      /* Fixed width */
-  height: 375px;                         /* Fixed height */
+.membre {
+  width: 20.54rem; /* 328.72px / 16 */
+  height: 23.44rem; /* 375px / 16 */
   position: relative;
   overflow: hidden;
   transition: all 0.5s ease-in;
@@ -92,86 +53,125 @@ opacity: 0px;
   align-items: center;
   cursor: pointer;
 }
+
 .event-card__container {
-  /* background: #fff; */
-  width: 328.72px;
-  height:258px;
-  gap: 8px;
+  width: 20.54rem; /* 328.72px / 16 */
+  height: 21.13rem; /* 258px / 16 */
+  gap: 0.5rem; /* 8px / 16 */
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
-  /* padding: 5px 0; */
-  
+  justify-content: space-between;
   box-sizing: border-box;
 }
+
+.btn-container {
+  position: relative;
+  width: 8.437rem;    
+  height: 4.375rem;   
+}
+
+.btn1, .btn1-hov {
+  position: relative; /* Position absolutely inside the container */
+  top: 0;             /* Align to the top of the container */
+  left: 0;            /* Align to the left of the container */
+  width: 100%;        /* Stretch to fill the container */
+  height: 100%;       /* Stretch to fill the container */
+  transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.btn1-hov {
+  opacity: 0; /* Hover image hidden by default */
+  top: -100%;
+  pointer-events: none; /* Prevent interactions with the hidden image */
+}
+
+.btn-container:hover .btn1-hov {
+  opacity: 1; /* Show hover image on hover */
+
+}
+
+.btn-container:hover .btn1 {
+  opacity: 0; /* Hide default button on hover */
+}
+
+
 .event-card h2 {
   font-family: Gemunu Libre;
-font-size: 38px;
-font-weight: 700;
-line-height: 41.19px;
-letter-spacing: 0.07em;
-text-align: center;
-text-underline-position: from-font;
-text-decoration-skip-ink: none;
-color:#ECB9DA;
-;
+  font-size: 2.375rem; /* 38px -> 2.375rem */
+  font-weight: 700;
+  line-height: 2.575rem; /* 41.19px -> 2.575rem */
+  letter-spacing: 0.07em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #ECB9DA;
 }
-@media screen and (max-width: 1200px){
-.event-card__container {
-    padding: 10px 0;
+@media screen and (max-width: 1200px) {
+  .event-card__container {
+    padding: 0.625rem 0; /* 10px -> 0.625rem */
   }
   .event-card h2 {
-    padding: 10px 0;
+    padding: 0.625rem 0; /* 10px -> 0.625rem */
   }
 }
-.event-card time{
+
+.event-card time {
   font-family: Gemunu Libre;
-  font-size: 25px;
+  font-size: 1.5625rem; /* 25px -> 1.5625rem */
   font-weight: 500;
-  line-height: 27.1px;
+  line-height: 1.69375rem; /* 27.1px -> 1.69375rem */
   letter-spacing: 0.07em;
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #FFF6ED;
-  
 }
-.prizes{
+
+.prizes {
   font-family: Gemunu Libre;
-  font-size: 35px;
+  font-size: 2.1875rem; /* 35px -> 2.1875rem */
   font-weight: 500;
-  line-height: 37.94px;
+  line-height: 2.37125rem; /* 37.94px -> 2.37125rem */
   letter-spacing: 0.07em;
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #C390BC;
-  
-
 }
-.event-prize span{
+
+.event-prize span {
   font-family: Gemunu Libre;
-font-size: 70px;
-font-weight: 700;
-line-height: 86.72px;
-letter-spacing: 0.07em;
-text-align: center;
-text-underline-position: from-font;
-text-decoration-skip-ink: none;
-color: #FFF6ED;
+  font-size: 4.375rem; /* 70px -> 4.375rem */
+  font-weight: 700;
+  line-height: 5.42125rem; /* 86.72px -> 5.42125rem */
+  letter-spacing: 0.07em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #FFF6ED;
+}
 
+/* Mobile responsive styles */
+@media screen and (max-width: 768px) {
+  .event-card h2 {
+    font-size: 2rem; /* Adjusted for smaller screens */
+    line-height: 2.3rem;
+  }
+
+  .event-card time {
+    font-size: 1.375rem; /* Adjusted for smaller screens */
+  }
+
+  .prizes {
+    font-size: 1.875rem; /* Adjusted for smaller screens */
+  }
+
+  .event-prize span {
+    font-size: 3.25rem; /* Adjusted for smaller screens */
+    line-height: 4.25rem;
+  }
 }
-/* .event-card__location {
-  text-decoration-color: #eb0ec7;
-  -webkit-text-decoration-color: #eb0ec7;
-  transition: all 250ms ease;
-  max-width: 13.3em;
-}
-.event-card__location:hover {
-  background-color: rgba(235, 14, 199, 0.2);
-  -webkit-text-decoration-color: rgba(235, 14, 199, 0.2);
-  text-decoration-color: rgba(235, 14, 199, 0.2);
-} */
+
 .event-card__buttons {
   display: flex;
   align-items: center;
@@ -235,7 +235,9 @@ color: #FFF6ED;
   text-decoration-skip-ink: none;
   background-color: transparent;
   border: none;
-  
+}
+.btn-container{
+ margin: auto;
 }
 @-webkit-keyframes gradient {
   0% {
@@ -285,9 +287,5 @@ color: #FFF6ED;
 @media (max-width: 400px) {
   .fas {
     display: none;
-  }
-
-  .event-card__buttons {
-    /* display: inline; */
   }
 }

@@ -77,7 +77,7 @@ export const Experience = () => {
         cameraRailDist: 1.5,
         position: new THREE.Vector3(
           curvePoints[5].x - 6,
-          curvePoints[5].y+1.5,
+          curvePoints[5].y+2,
           curvePoints[5].z
         ),
         title: "Prometeo'25",
@@ -114,7 +114,9 @@ export const Experience = () => {
     if (lastScrollPosition.current <= 0 && scroll.offset > 0) {
       setHasScroll(true);
     }
-
+    if (play){
+      sceneOpacity.current = 1
+    }
     if (play && !end && sceneOpacity.current < 1) {
       sceneOpacity.current = THREE.MathUtils.lerp(
         sceneOpacity.current,
@@ -315,7 +317,7 @@ export const Experience = () => {
       </group>
 
       {textSections.map((textSection, index) => (
-          <TextPath {...textSection} key={index} />
+          <TextPath {...textSection} opacity={1} key={index} />
         ))}
       
       {/* <Iceberg opacity={sceneOpacity} scale={[0.3,0.3,0.3]} position={[-10, 0.3, -30]} />
@@ -323,10 +325,10 @@ export const Experience = () => {
       <Iceberg opacity={sceneOpacity} scale={[0.2,0.1,0.3]} position={[9, -0.2, -15]} />
       <Iceberg opacity={sceneOpacity} scale={[0.4,0.4,0.4]} position={[10, 0.2, -40]} /> */}
       <Float floatIntensity={0.8} speed={1}  rotationIntensity={0.01}>
-        <GlacierFinal scale={[15,15,15]} position={[23.5, -0.5, -70]} />
+        <GlacierFinal scale={[15,15,15]} position={[23.5, -0.3, -70]} />
       </Float>
       <Float floatIntensity={0.8} speed={1}  rotationIntensity={0.01}>
-        <GlacierFinal scale={[13,13,13]} position={[24, -0.5, -130]} />
+        <GlacierFinal scale={[13,13,13]} position={[24, -0.3, -130]} />
       </Float>
       
       

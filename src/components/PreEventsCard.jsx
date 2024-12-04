@@ -1,6 +1,8 @@
 import React from "react";
 import { API_BASE_URL } from "../config";
 import imageBox from "../assets/events/imageBox.svg"
+import btn1 from "../assets/events/button-1.svg"
+import btn1h from "../assets/events/button-1hov.svg"
 import "./PreEventsCard.css";
 
 const PreEventsCard = ({
@@ -15,7 +17,6 @@ const PreEventsCard = ({
     <div className='event-card' aria-labelledby="event card">
       <div className="event-card__filter membre">
         <div className="register-btn-div">
-
           <button className="r-btn">Register</button>
         </div>
         <a href={eventRegister}>
@@ -28,7 +29,7 @@ const PreEventsCard = ({
           </div>
         </a>
       </div>
-      <div className="event-card__container">
+      <div className="event-card__container ">
         <h2>{eventName}</h2>
         <time>
           {eventTime
@@ -37,6 +38,10 @@ const PreEventsCard = ({
             .replace("01", "JAN")
             .replace("12", "DEC")}
         </time>
+        <div className="btn-container ">
+          <img src={btn1} className="btn1" alt="" />
+          <img src={btn1h} className="btn1-hov" alt="" />
+        </div>
         <div className="event-prize">
           {eventButton != "Coming soon..." ? (
             <>

@@ -19,7 +19,7 @@ import eventsData from "./Events24";
 
 
 const Events = () => {
-  const [category, setCategory] = useState("All");
+  const [category, setCategory] = useState("Technical");
   const [loading, setLoading] = useState(true);
   const IMAGES = [
     {
@@ -76,93 +76,74 @@ const Events = () => {
         <PageLoader />
       ) : (
         <FadeIn>
-          <div
-            className="eventspage-main "
-            style={{ backgroundImage: `url(${bg})` }}
-          >
-            <div className="events-heading">
-              <h1 className="selected-heading">{`${category} EVENTS`}</h1>
-            </div>
-            <FadeInContent>
-              <div className="eventspage-events">
-                <div className="filter" id="filter___id">
-                  {
-                    category != 'All' ?
-                      (<button
-                        className={`filter___button`}
-                        onClick={(e) => {
-                          setCategory("All");
-                          // element.scrollIntoView({
-                          //   behavior: "smooth",
-                          //   block: "start",
-                          // });
-                          // handleEventTab(0);
-                        }}
-                      >
-                        <img className="" src={all_events} alt="cloud" />
-                      </button>) : <></>
-                  }
-
-                  {
-                    category != 'pre_Events' ?
-                      (<button
-                        className={`filter___button`}
-                        onClick={(e) => {
-                          setCategory("pre_Events");
-                          // element.scrollIntoView({
-                          //   behavior: "smooth",
-                          //   block: "start",
-                          // });
-                          // handleEventTab(0);
-                        }}
-                      >
-                        <img className="" src={pre_events} alt="cloud" />
-                      </button>) : <></>
-                  }
-                  {
-                    category != 'Technical' ?
-                      ( <button
-                        className={`filter___button`}
-                        onClick={(e) => {
-                          setCategory("Technical");
-                          // element.scrollIntoView({
-                          //   behavior: "smooth",
-                          //   block: "start",
-                          // });
-                          // handleEventTab(1);
-                        }}
-                      >
-                        <img className="" src={technical_events} alt="cloud" />
-                      </button>) : <></>
-                  }
-                  {
-                    category != 'Entrepreneurial' ?
-                      (<button
-                        className={`filter___button`}
-                        onClick={(e) => {
-                          setCategory("Entrepreneurial");
-                          // element.scrollIntoView({
-                          //   behavior: "smooth",
-                          //   block: "start",
-                          // });
-                          // handleEventTab(2);
-                        }}
-                      >
-                        <img
-                          className=""
-                          src={entrepreneurial_events}
-                          alt="cloud"
-                        />
-                      </button>) : <></>
-                  }
-                </div>
-                <div className="pre-events" id="EventList">
-                  <PreEvents category={category} data={eventsData} />
-                </div>
+          <div className="w-full h-svh">
+            <div
+              className="eventspage-main "
+              style={{ backgroundImage: `url(${bg})` }}
+            >
+              <div className="events-heading">
+                <h1 className="selected-heading">All events</h1>
               </div>
-            </FadeInContent>
+              <FadeInContent>
+                <div className="eventspage-events">
+                  <div className="filter" id="filter___id">
+                   
+                        <button
+                          className={`filter___button`}
+                          onClick={(e) => {
+                            setCategory("pre_Events");
+                            // element.scrollIntoView({
+                            //   behavior: "smooth",
+                            //   block: "start",
+                            // });
+                            // handleEventTab(0);
+                          }}
+                        >
+                          <img className="" src={pre_events} alt="cloud" />
+                        </button>
+                    
+                   
+                        <button
+                          className={`filter___button`}
+                          onClick={(e) => {
+                            setCategory("Technical");
+                            // element.scrollIntoView({
+                            //   behavior: "smooth",
+                            //   block: "start",
+                            // });
+                            // handleEventTab(1);
+                          }}
+                        >
+                          <img className="" src={technical_events} alt="cloud" />
+                        </button>
+                    
+                        <button
+                          className={`filter___button`}
+                          onClick={(e) => {
+                            setCategory("Entrepreneurial");
+                            // element.scrollIntoView({
+                            //   behavior: "smooth",
+                            //   block: "start",
+                            // });
+                            // handleEventTab(2);
+                          }}
+                        >
+                          <img
+                            className=""
+                            src={entrepreneurial_events}
+                            alt="cloud"
+                          />
+                        </button>
+                    
+                  </div>
+                  <div className="pre-events" id="EventList">
+                    <PreEvents category={category} data={eventsData} />
+                  </div>
+                </div>
+              </FadeInContent>
+            </div>
+            <Go2Top />
           </div>
-          <Go2Top />
         </FadeIn>
       )}
     </>

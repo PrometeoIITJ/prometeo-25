@@ -2,7 +2,12 @@ import React, { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import "./accomodation.css";
 import { description } from "./clgdesc";
-
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import PageLoader from "../components/PageLoader";
 import FadeIn from "../components/FadeIn";
 import FadeInContent from "../components/FadeInContent";
 import PageLoader from "../components/PageLoader";

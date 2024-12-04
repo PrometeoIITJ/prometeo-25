@@ -1,88 +1,77 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap");
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('../assets/events/fonts.otf') format('opentype'); /* Ensure the path is correct */
+}
+
 .eventspage-main {
   margin: 0 auto;
-  /* max-width: 1440px; */
-  padding: 0 5vh;
+  /* padding: 0 5rem; Horizontal padding */
   width: 100%;
   box-sizing: border-box;
   background-size: cover;
   background-repeat: repeat;
-  background-position: center;
+  background-position: bottom;
   background-attachment: fixed;
 }
-.events-allevents {
-  margin: 7vh 0;
-}
-.events-allevents button {
-  background: #870a0c;
-  color: #fff;
-  border: none;
-  outline: none;
-  font-family: "Orbitron", sans-serif;
-  font-size: 2.5vh;
-  text-transform: uppercase;
-  word-spacing: 5px;
-  padding: 20px 50px;
-  cursor: pointer;
-  transition: 0.5s;
-}
-#filter___id button {
-  border-top: none;
-  border-left: none;
-  border-right: none;
-}
-.eventspage-glimpses {
-  padding-bottom: 15vh;
+
+/* Heading Styles */
+.events-heading {
+  font-family: 'MyFont', sans-serif;
+  font-size: 7.5rem; /* Scalable heading size */
+  font-weight: 400;
+  /* line-height: 8.25rem; */
+  text-align: center;
+  padding-top: 50svh;
+  padding-bottom: 20svh;
+  height: 70svh;
+
+  background-repeat: no-repeat;
+  -webkit-background-clip: text; /* For text masking */
+  background-clip: text; /* Standard property */
+  background-size: cover;
+  /* background-position: -12.9375rem 6.25rem; Converted to rem (-207px 100px) */
+  background-attachment: fixed; 
+  width: 100%; /* Ensures the container spans full width */
+  color: transparent;
 }
 
-.events-buttons {
-  display: flex;
-  justify-content: center;
-  /* flex-direction: row; */
-  /* justify-content: space-between; */
-}
-
-.filter {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: -5vw;
-}
-
-.filter___button {
-  padding: 0;
-  background: transparent;
-  width: 100%;
-  border: 0;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-.filter___button.active {
-  scale: 1.1;
-  border-bottom: 5px solid #ED1507;
-  border-radius: 0;
-}
-.filter___button.active:hover{
-  scale: 1;
-}
-.filter___button:hover {
-  scale: 1.1;
-}
-.filter___button:focus {
-  outline: none;
-}
-.filter___button img {
-  width: 100%;
-}
-.workshops-content-main{
-  padding-bottom: 10vh;
-}
-@media screen and (max-width: 600px) {
-  .events-allevents button {
-    font-size: 2vh;
-    padding: 2vh;
-    word-spacing: 0;
+/* Responsive Adjustments for Smaller Screens */
+@media screen and (max-width: 64rem) { /* 1024px */
+  .events-heading {
+    font-size: 5.625rem; /* Adjusted font size for tablets */
+    line-height: 6.25rem;
   }
   .eventspage-main {
-    padding: 0 3vh;
+    padding: 0 4rem;
+  }
+}
+
+@media screen and (max-width: 48rem) { /* 768px */
+  .events-heading {
+    font-size: 4.375rem; /* Adjusted font size for smaller tablets */
+    line-height: 5rem;
+  }
+  .eventspage-main {
+    padding: 0 3rem;
+  }
+}
+
+@media screen and (max-width: 37.5rem) { /* 600px */
+  .events-heading {
+    font-size: 3.125rem; /* Font size for mobile devices */
+    line-height: 3.75rem;
+    text-align: center; /* Ensure proper alignment */
+  }
+
+  .events-allevents button {
+    font-size: 1.25rem;
+    padding: 1.25rem;
+    word-spacing: 0;
+  }
+
+  .eventspage-main {
+    padding: 0 2rem;
   }
 }

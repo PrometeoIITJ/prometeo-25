@@ -28,13 +28,28 @@ import Home from "./pages/Home.jsx";
 import smallLogo from "../src/assets/logo.gif";
 import image from "../src/assets/image.png";
 import { PlayProvider } from "./components/landing/Play.jsx";
-
 function App() {
   return (
     <>
       <Router>
         <AuthProvider>
           <Navbar /> 
+          <Link to={'/'} >
+            <img
+              className="home-img"
+              src={smallLogo}
+              style={{zIndex:100}}
+              alt="click to go home"
+              onClick={() => handleNavClick()}
+            />
+            <img
+        className="title-image"
+        src={image}
+        style={{zIndex:100}}
+        alt="Prometeo '25"
+        onClick={() => handleNavClick()}
+      />
+          </Link>
           <Routes>
             <Route path="/" element={<PlayProvider> <Home/> </PlayProvider>} />
             <Route path="/ca" element={<CA />} />
