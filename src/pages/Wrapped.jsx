@@ -8,7 +8,7 @@ export default function () {
   return (
     <div style={{height:"100%",width:"100%"}}>
     <div className='wrapped_container'>
-    <div className="logo">
+    <div className="wrapped_logo">
                 <Link to="/"><img src={logo} alt="Logo" /></Link>
               </div>
     <div className='wrapped_box'>
