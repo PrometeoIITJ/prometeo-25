@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&display=swap');
+
 .wrapped_container{
     height: 100svh;
     width: 100vw;
     background-image: url('../assets/Register-Desktop_large.png');
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     justify-content: center;
@@ -25,4 +27,51 @@
 .text_{
     font-size: 40px;
     font-weight: 500;
+    font-family: "Changa", sans-serif;
+}
+
+
+.wrapped_logo {
+    box-sizing: border-box;
+    width: auto; 
+    /* margin: 1.2rem; */
+    height: auto !important; /* Reset height */
+    padding: 0 !important;
+    z-index: 10;
+  }
+  
+  .wrapped_logo img {
+    margin-top: 4rem;
+    /* max-width: 40%; */
+    height: auto; 
+    width: 300px;
+  }
+
+
+  @media screen and (max-width: 1480px) {
+
+
+      .wrapped_container{
+        background-image: url('../assets//Register-Desktop.png');
+      }
+}
+
+@media screen and (max-width: 480px) {
+
+    .text_{
+        font-size: 25px;
+        font-weight: 500;
+        font-family: "Changa", sans-serif;
+        margin-bottom: 3rem;
+    }
+    .wrapped_logo img {
+        margin-top: 4rem;
+        /* max-width: 40%; */
+        height: auto; 
+        width: 250px;
+      }
+
+      .wrapped_container{
+        background-image: url('../assets/iPhone\ 16\ Pro\ -\ 1.png');
+      }
 }
