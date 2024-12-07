@@ -6,6 +6,12 @@
     padding: 0px 20px ;
 } */
 
+@font-face {
+  font-family: 'Zaptron';
+  src: url('../assets/Zaptron-Regular.otf') format('opentype');
+  font-style: normal;
+  font-weight: 400;
+}
 
 .spos-title {
   color: #ed9340;
@@ -57,7 +63,7 @@
   opacity: 1;
 
   /* Font and text styles */
-  font-family: "Metal Mania", cursive; /* Ensure Zaptron is loaded */
+  font-family: "Zaptron", cursive; /* Ensure Zaptron is loaded */
   font-size: 105px;
   font-weight: 400;
   line-height: 115.5px;
