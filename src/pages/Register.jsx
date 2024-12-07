@@ -3,7 +3,7 @@ import SignUp from "../components/Signup";
 import SignIn from "../components/Signin";
 import login_gate from "../assets/login-gate.jpg";
 import signup_gate from "../assets/signup-gate.jpg";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect ,useState} from "react";
 import AuthContext from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
@@ -34,7 +34,6 @@ const Register = () => {
     const signIn = document.getElementById("sign-in-container-id");
     const signUp = document.getElementById("sign-up-container-id");
     container.classList.add("right-panel-active");
-    container.classList.remove("heig")
     signIn.classList.add("hide-it");
     container.classList.remove('right')
     container.classList.add('left')
@@ -43,15 +42,14 @@ const Register = () => {
       top: 0,
       behavior: "smooth",
     });
-    setBg(signup_gate);
+    setBg(signup_gate)
+
   };
   const handleSignin = () => {
     const container = document.getElementById("form-container-id");
     const signIn = document.getElementById("sign-in-container-id");
     const signUp = document.getElementById("sign-up-container-id");
-    container.classList.remove("right-panel-active");
-    container.classList.add("heig")
- 
+    container.classList.remove("right-panel-active"); 
     container.classList.add('right');
     container.classList.remove('left');
     signIn.classList.remove("hide-it");

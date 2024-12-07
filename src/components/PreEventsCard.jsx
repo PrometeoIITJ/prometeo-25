@@ -4,8 +4,8 @@ import imageBox from "../assets/events/imageBox.svg"
 import btn1 from "../assets/events/button-1.svg"
 import btn1h from "../assets/events/button-1hov.svg"
 import "./PreEventsCard.css";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import {toast} from 'react-hot-toast';
+import "react-toastify/dist/ReactToastify.css"; 
 
 const PreEventsCard = ({
   imgURL,
@@ -18,27 +18,31 @@ const PreEventsCard = ({
 }) => {
 
   const notify = () => {
-    toast.dark("Registration are not Started!", {
-      position: "top-center", // Toast position (centered horizontally)
-      autoClose: 3000,        // Close after 3 seconds
-      hideProgressBar: true,  // No progress bar
-      closeOnClick: true,     // Allow toast to close when clicked
-      pauseOnHover: false,    // Disable pause on hover for simplicity
-      draggable: false,     // Allow the toast to be dragged
+    toast("Registration Comming soon!!", {
+      duration: 3000, // Auto-close after 3 seconds
+      position: "top-center", // Center the toast on the screen
+     
     });
   };
+  function truncateText(text, wordLimit) {
+    const words = text.split(" ");
+    return words.length > wordLimit
+      ? words.slice(0, wordLimit).join(" ") + "..."
+      : text;
+  }
+  
   return (
     <div className='event-card' aria-labelledby="event card">
       <div className="event-card__filter membre">
         <div className="register-btn-div">
-          <p className="r-btn">{description}</p>
+          <p className="r-btn">{truncateText(description, 35)}</p>
         </div>
         <a href={eventRegister}>
           <div className="member-img " >
             <div className="background-overlay " style={{ backgroundImage: `url(${imageBox})` }}   ></div>
             <img src={imgURL.replace(
-              "http://localhost:8000",
-              "https://apiv.prometeo.in"
+              "http://localhost:8004",
+              "https://devluplabs.iitj.ac.in"
             )} alt="" />
           </div>
         </a>
@@ -70,7 +74,7 @@ const PreEventsCard = ({
         </div>
      
       </div>
-      <ToastContainer />
+      
     </div>
   );
 };
