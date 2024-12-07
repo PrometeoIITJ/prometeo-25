@@ -3,6 +3,7 @@ import { Toaster } from "react-hot-toast";
 import "./App.css";
 
 import { AuthProvider } from "./context/AuthContext.jsx";
+import { Helmet } from "react-helmet";
 
 import Navbar from "./components/Navbar";
 import Sponsors from "./pages/Sponsors.jsx";
@@ -33,6 +34,38 @@ function App() {
     <>
       <Router>
         <AuthProvider>
+        <Helmet>
+            {/* Global Meta Tags */}
+            <meta charSet="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <meta
+              name="description"
+              content="Experience Prometeo 2025, IIT Jodhpur's premier techfest blending innovation, technology, and entrepreneurship. Join us for an unforgettable celebration of workshops, competitions, and networking opportunities. Learn, compete, and explore the future!"
+/>
+            <meta name="og:site_name" content="Prometeo'25" />
+            <meta name="og:title" content="Prometeo'25 - Innovate, Implement and Improve" />
+            <meta
+              name="og:description"
+              content="Experience Prometeo 2025, IIT Jodhpur's premier techfest blending innovation, technology, and entrepreneurship. Join us for an unforgettable celebration of workshops, competitions, and networking opportunities. Learn, compete, and explore the future!"
+/>
+            <meta name="og:url" content="https://prometeo.in/" />
+            <meta name="og:type" content="website" />
+            <meta
+              name="og:image"
+              itemProp="image"
+              content="https://i.postimg.cc/SRp1THcV/image.png"
+            />
+            <meta property="og:image:type" content="image/png" />
+            <meta property="og:image:width" content="300" />
+            <meta property="og:image:height" content="300" />
+            <meta name="twitter:title" content="Prometeo'25 - Innovate, Implement and Improve" />
+            <meta
+              name="twitter:description"
+              content="Prometeo 2025 is the fifth edition of IIT Jodhpur's Technical and Entrepreneurial Festival."
+            />
+            <meta name="twitter:image" content="https://i.postimg.cc/SRp1THcV/image.png" />
+            <title>Prometeo'25</title>
+          </Helmet>
           <Navbar /> 
           <Link to={'/'} >
             <img
