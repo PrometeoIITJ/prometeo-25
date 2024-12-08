@@ -13,7 +13,7 @@
   border: 1px solid #ccc;
   position: fixed;
   bottom: 5vh;
-  right: 10vh;
+  right: 8vh;
   transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
   cursor: pointer;
   z-index: 999;

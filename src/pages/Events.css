@@ -41,6 +41,10 @@
   border-top: none;
   border-left: none;
   border-right: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 .eventspage-glimpses {
   padding-bottom: 15vh;

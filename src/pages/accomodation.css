@@ -19,7 +19,7 @@
   margin: 0 auto;
   width: 100vw;
   box-sizing: border-box;
-  background-position: center;
+  background-position: 80%;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -92,18 +92,6 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #B7D7FF;
-}
-
-.caDetails {
-  font-family: 'Changa', sans-serif;
-  margin: 0 auto;
-  box-sizing: border-box;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  min-height: 100vh;
-  overflow: hidden;
 }
 
 .ca_body {

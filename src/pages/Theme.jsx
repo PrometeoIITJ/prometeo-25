@@ -99,13 +99,14 @@ const Theme = () => {
               <div className="theme_video">
                 <div className="video_play">
                   <iframe
-                    src="https://www.youtube.com/embed/tXr0-hL-Yes?si=1OjPE-Oz7MpEljn8"
+                    src="https://www.youtube.com/embed/Ro8KDBJcevY?si=QDwTaPn-QbYCnSCe"
                     title="YouTube video player"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
-                  ></iframe>
+                  >
+                  </iframe>
                 </div>
               </div>
             </div>
