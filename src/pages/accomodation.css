@@ -211,29 +211,14 @@
 }
 
 @media (max-width: 1024px) {
-  .gold_incentives p,
-  .silver_incentives p {
-    font-size: 5vw;
-  }
-
-  .silver_incentives,
-  .gold_incentives {
-    height: 180px;
-  }
 }
 
 @media (max-width: 768px) {
-  .gold_incentives p,
-  .silver_incentives p {
-    font-size: 5vw;
-  }
+
 }
 
 @media (max-width: 480px) {
-  .gold_incentives p,
-  .silver_incentives p {
-    font-size: 5vw;
-  }
+
 }
 
 @media (min-width: 1024px) {

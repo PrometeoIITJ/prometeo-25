@@ -129,7 +129,7 @@ const CA = () => {
                           <p className="campusA">Campus Ambassador</p>
                         </div>
                         <div className="reg_With_Acco">
-                          15+ Registrations (with accommodation)
+                          10+ Registrations (with accommodation)
                         </div>
                         <div className="silver_brief">
                           {silver_amabassador.map((item, index) => (
@@ -146,7 +146,7 @@ const CA = () => {
                           <p className="campusA">Campus Ambassador</p>
                         </div>
                         <div className="reg_With_Acco">
-                          30+ Registrations (with accommodation)
+                          20+ Registrations (with accommodation)
                         </div>
                         <div className="silver_brief">
                           {gold_amabassador.map((item, index) => (
@@ -183,8 +183,8 @@ const CA = () => {
                 </div>
               </div>
             </div>
+            <Go2Top />
           </div>
-          <Go2Top />
         </FadeIn>)}
     </>
   );
