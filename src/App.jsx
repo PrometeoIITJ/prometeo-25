@@ -76,7 +76,7 @@ function App() {
             <Route path="/edit-profile" element={<Edit_profile />} />
             <Route path="/business-darbar" element={<Darbar />} />
           </Routes>
-{/*           <Chatbot /> */}
+          <Chatbot />
           <Toaster />
           <ToastContainer />
         </AuthProvider>
