@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import botChat from "../assets/logo.gif";
+import botChat from "../assets/botImage.png";
 import './Chatbot.css';
 
 const Chatbot = () => {
 
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { text: 'Hello! How can I help you today?', bot: true}
+    { text: 'Hello! How can I help you today?', sender: 'bot'}
   ]);;
   const [inputMessage, setInputMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-
+  const [isOnline, setIsOnline] = useState(true);
 
   const apiResponse = async (prompt) => {
     try {
@@ -20,7 +20,7 @@ const Chatbot = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          model: "prometeo_1",
+          model: "prometeo_iter3",
           prompt: prompt,
           stream: false,
         }),
@@ -35,6 +35,7 @@ const Chatbot = () => {
 
     } catch (error) {
       console.error('error',error.message);
+      setIsOnline(false);
       throw error;
     }
   };
@@ -50,7 +51,8 @@ const Chatbot = () => {
 
     setMessages((prev) => [...prev, userMessage]);
     setInputMessage('');
-
+    const botMessage = { text: ' ...', sender: 'bot' };
+    setMessages((prev) => [...prev, botMessage]); 
     setIsLoading(true);
     try {
       const data = await apiResponse(inputMessage);
@@ -59,13 +61,22 @@ const Chatbot = () => {
         sender: 'bot',
       };
 
-      setMessages((prev) => [...prev, botMessage]);
+      setMessages((prev) =>{
+        const updatedMessages = [...prev];
+        const lastMessage = updatedMessages[updatedMessages.length - 1];
+        if (lastMessage.sender === 'bot') {
+          lastMessage.text = botMessage.text;
+        }
+        return updatedMessages;
+      } );
+      setIsOnline(true)
     } catch (error) {
       console.error('Chat Error:', error.message);
       const errorMessage = {
         text: 'services not available, please try some time later',
         sender: 'bot',
       };
+      setIsOnline(false);
       setMessages((prev) => [...prev, errorMessage]);
     } finally {
       setIsLoading(false);
@@ -75,7 +86,7 @@ const Chatbot = () => {
   return (
     <div className="chatbot-container">
       <button
-        className="chatbot-toggle"
+        className="chatbot-toggle flex justify-center items-center"
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? '✕' : '💬'}
@@ -83,8 +94,15 @@ const Chatbot = () => {
 
       {isOpen && (
         <div className="chatbot">
-          <div className="chat-header">
-            <h3>Chat Assistant</h3>
+          <div className="chat-header flex gap-2">
+            <img src={botChat} className='h-9' />
+            <div>
+              <h3 className='saga pl-0'>Saga</h3>
+             { isOnline?
+              (<p className='online'> <span className='text-[10px]'>🟢</span> Online</p>):
+              (<p className='online text-red-600'> <span className='text-[10px]'>🔴</span> Offline</p>)}
+            </div>
+            
           </div>
 
           <div className="messages">
@@ -95,7 +113,7 @@ const Chatbot = () => {
                     {message.sender === 'bot' ? (
                       <img
                         src={botChat}
-                        className="botImage"
+                        className="botImage w-9"
                       />
                     ) : (
                       '👤'
@@ -108,12 +126,14 @@ const Chatbot = () => {
           </div>
 
           <form onSubmit={userAsk} className="userInput">
+       
             <input
               value={inputMessage}
               onChange={(e) => setInputMessage(e.target.value)}
-              placeholder="Type your message.."
+              placeholder="Ask me Anything"
             />
-            <button type="submit">Send</button>
+            <button type="submit">➤</button>
+            
           </form>
         </div>
       )}

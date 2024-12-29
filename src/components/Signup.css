@@ -223,7 +223,7 @@ body{
   white-space: nowrap; /* Prevent text wrapping to new lines */
 }
 .log-in:hover {
-  background-color: #6B6B6B59;
+  background-color: #6f6f6fb7;
   border: 2px solid white;
   cursor: pointer;
 }
